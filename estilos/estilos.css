@@ -286,6 +286,11 @@ h5{
 
 
 .noticias{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 95%;
+    justify-content: center;
+
     animation-name: aparicion;
     animation-duration: 1s;
     animation-timing-function: ease;
@@ -298,11 +303,7 @@ h5{
     background-color: rgb(16, 47, 56);
     border: rgb(57, 135, 126) 3px solid;
     
-}
-
-.noti-grid{
-    gap: 30px;
-    justify-content: center;
+    
 }
 
 .noticias h2{
@@ -560,7 +561,35 @@ h5{
         z-index: 100;
     }
 
+    /* Grid de Noticias */
 
+    .noticias{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        grid-template-areas: 
+        "not-1 not-2"
+        "not-3 not-4"
+        ;
+        padding: 15px;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+
+    .not-1{
+        grid-area: not-1;
+    }
+
+    .not-2{
+        grid-area: not-2;
+    }
+
+    .not-3{
+        grid-area: not-3;
+    }
+
+    .not-4{
+        grid-area: not-4;
+    }
 
 }
 
